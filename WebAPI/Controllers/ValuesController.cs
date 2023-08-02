@@ -24,14 +24,14 @@ namespace WebAPI.Controllers
 
         // GET api/values
         [ResponseType(typeof(List<Empleado>))]
-        public async Task<IHttpActionResult> Get()
+        public IHttpActionResult Get()
         {
             return Ok(_empleados);
         }
 
         // GET api/values/5
         [ResponseType(typeof(Empleado))]
-        public async Task<IHttpActionResult> Get(int id)
+        public IHttpActionResult Get(int id)
         {
             var empleado = _empleados.Find(x => x.Id == id);
             if (empleado == null)
@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
 
         // POST api/values
         [ResponseType(typeof(Empleado))]
-        public async Task<IHttpActionResult> Post([FromBody] Empleado empleado)
+        public IHttpActionResult Post([FromBody] Empleado empleado)
         {
             _empleados.Add(empleado);
             return CreatedAtRoute("", new { id = empleado.Id}, empleado );
