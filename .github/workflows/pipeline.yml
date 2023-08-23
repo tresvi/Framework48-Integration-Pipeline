@@ -14,6 +14,15 @@ jobs:
           fetch-depth: 0
       - name: Add MSBuild to PATH
         uses: microsoft/setup-msbuild@v1.1
+        
+      - name: imprimir cosas
+        run: "${{env.PROJECT_PATH}}"
+
+      - name: imprimir cosas 2
+        run: "${{env.GITHUB_WORKSPACE}}"
+
+      - name: imprimir cosas 3
+        run: "${{env.BUILD_CONFIGURATION}}
 
       - name: Restaurar Paquetes Nuget
         working-directory: ${{env.GITHUB_WORKSPACE}}
@@ -23,4 +32,3 @@ jobs:
         working-directory: ${{env.GITHUB_WORKSPACE}}
         #run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
         run: msbuild /m /p:Configuration=Release ${{env.SOLUTION_FILE_PATH}}
-   
