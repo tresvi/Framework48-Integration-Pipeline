@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  PROJECT_PATH: CI_con_NetFramework_4_8.csproj
+  PROJECT_PATH: CI_con_NetFramework_4_8\CI_con_NetFramework_4_8.csproj
 
 jobs:
   build-project:
