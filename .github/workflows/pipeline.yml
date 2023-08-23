@@ -16,13 +16,13 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
         
       - name: imprimir cosas
-        run: echo "${{env.PROJECT_PATH}}"
+        run: echo "$env.PROJECT_PATH"
 
       - name: imprimir cosas 2
-        run: echo "${{env.GITHUB_WORKSPACE}}"
+        run: echo "$env.GITHUB_WORKSPACE"
 
       - name: imprimir cosas 3
-        run: echo "${{env.BUILD_CONFIGURATION}}
+        run: echo "${{env.BUILD_CONFIGURATION"
 
       - name: Restaurar Paquetes Nuget
         working-directory: ${{env.GITHUB_WORKSPACE}}
