@@ -20,7 +20,9 @@ jobs:
 
       - name: Restaurar Paquetes Nuget
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: nuget restore ${{env.PROJECT_PATH}}
+        run: |
+          dir
+          nuget restore ${{env.PROJECT_PATH}}
       
       - name: Build
         working-directory: ${{env.GITHUB_WORKSPACE}}
