@@ -22,7 +22,7 @@ jobs:
         run: echo "$env.GITHUB_WORKSPACE"
 
       - name: imprimir cosas 3
-        run: echo "${{env.BUILD_CONFIGURATION"
+        run: echo "$env.BUILD_CONFIGURATION"
 
       - name: Restaurar Paquetes Nuget
         working-directory: ${{env.GITHUB_WORKSPACE}}
