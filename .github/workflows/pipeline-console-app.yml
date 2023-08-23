@@ -17,10 +17,15 @@ jobs:
 
       - name: imprimir cosas
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: | 
-          "${{env.PROJECT_PATH}}"
-          "${{env.GITHUB_WORKSPACE}}"
-          "${{env.BUILD_CONFIGURATION}}
+        run: "${{env.PROJECT_PATH}}"
+
+      - name: imprimir cosas 2
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: "${{env.GITHUB_WORKSPACE}}"
+
+      - name: imprimir cosas 3
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: "${{env.BUILD_CONFIGURATION}}
 
       - name: Restaurar Paquetes Nuget
         working-directory: ${{env.GITHUB_WORKSPACE}}
